@@ -60,9 +60,7 @@ const getData = async (req, res) => {
 const fetchFloodProbability = async (req, res) => {
     try {
       
-       // const { city } = req.query;
-
-       const city = "Mumbai";
+     const { city } = req.query;
 
       const response = await axios.get(`http://13.201.76.20:5000/api/v1/floodProbability?city=${city}`);
       res.status(200).json(response.data);
